@@ -7,7 +7,14 @@ interface ImageProps extends StyleProps {
   src?: string;
 }
 
-export function Image({ src, width, height, style, action }: ImageProps) {
+export function Image({
+  src,
+  width,
+  height,
+  style,
+  className,
+  action,
+}: ImageProps) {
   return (
     <img
       src={src}
@@ -15,6 +22,7 @@ export function Image({ src, width, height, style, action }: ImageProps) {
       height={height}
       style={{ ...style }}
       onClick={action}
+      className={className}
     />
   );
 }

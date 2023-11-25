@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Paragraph({ style, children }: StyleProps) {
+export function Paragraph({ style, className, children }: StyleProps) {
   return (
     <p
       style={{
@@ -8,8 +8,10 @@ export function Paragraph({ style, children }: StyleProps) {
         fontWeight: 400,
         lineHeight: "130%",
         letterSpacing: "1px",
+        wordWrap: "break-word",
         ...style,
       }}
+      className={className}
     >
       {children}
     </p>

@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function UnOrderedList({ style, children }: StyleProps) {
+export function UnOrderedList({ style, className, children }: StyleProps) {
   return (
     <ul
       style={{
@@ -11,6 +11,7 @@ export function UnOrderedList({ style, children }: StyleProps) {
         margin: 0,
         ...style,
       }}
+      className={className}
     >
       {children}
     </ul>

@@ -23,3 +23,8 @@
     display: block;
   }
 }
+
+/*Header Nav Icon*/
+.header-nav-icon:hover {
+  box-shadow: 0 0 10px #3498db;
+}

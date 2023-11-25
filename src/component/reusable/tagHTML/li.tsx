@@ -5,7 +5,7 @@ interface ListProps extends StyleProps {
   action?: () => void;
 }
 
-export function List({ style, children, action }: ListProps) {
+export function List({ style, className, children, action }: ListProps) {
   return (
     <li
       style={{
@@ -13,6 +13,7 @@ export function List({ style, children, action }: ListProps) {
         padding: "4px 12px",
         ...style,
       }}
+      className={className}
       onClick={action}
     >
       {children}

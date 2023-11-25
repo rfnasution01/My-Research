@@ -3,7 +3,7 @@ import { StyleProps } from "..";
 interface AnchorProps extends StyleProps {
   href?: string;
 }
-export function Anchor({ style, href, children }: AnchorProps) {
+export function Anchor({ style, className, href, children }: AnchorProps) {
   return (
     <a
       href={href}
@@ -13,6 +13,7 @@ export function Anchor({ style, href, children }: AnchorProps) {
         cursor: "pointer",
         ...style,
       }}
+      className={className}
     >
       {children}
     </a>
