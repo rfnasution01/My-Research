@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Heading1({ style, children }: StyleProps) {
+export function Heading1({ style, className, children }: StyleProps) {
   return (
     <h1
       style={{
@@ -12,8 +12,10 @@ export function Heading1({ style, children }: StyleProps) {
         letterSpacing: "1px",
         margin: 0,
         padding: 0,
+        wordWrap: "break-word",
         ...style,
       }}
+      className={className}
     >
       {children}
     </h1>

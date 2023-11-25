@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction } from "react";
 import {
   Container,
-  DashboardHeaderNav,
   Header,
+  HeaderNav,
   Image,
   Nav,
   Section,
@@ -32,7 +32,7 @@ export function MainLayoutHeader({
               style={{ cursor: "pointer" }}
               action={() => setPage("Home")}
             />
-            <DashboardHeaderNav setPage={setPage} />
+            <HeaderNav setPage={setPage} />
           </Nav>
         </Section>
       </Container>

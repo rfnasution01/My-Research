@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Header({ style, children }: StyleProps) {
+export function Header({ style, className, children }: StyleProps) {
   return (
     <header
       style={{
@@ -10,6 +10,7 @@ export function Header({ style, children }: StyleProps) {
         color: "#fff",
         ...style,
       }}
+      className={className}
     >
       {children}
     </header>

@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Nav({ style, children }: StyleProps) {
+export function Nav({ style, className, children }: StyleProps) {
   return (
     <nav
       style={{
@@ -10,6 +10,7 @@ export function Nav({ style, children }: StyleProps) {
         justifyContent: "center",
         ...style,
       }}
+      className={className}
     >
       {children}
     </nav>

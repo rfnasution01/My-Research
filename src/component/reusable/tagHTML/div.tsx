@@ -1,5 +1,18 @@
 import { StyleProps } from "..";
 
-export function Division({ style, children }: StyleProps) {
-  return <div style={{ ...style }}>{children}</div>;
+interface DivisionProps extends StyleProps {
+  action?: () => void;
+}
+
+export function Division({
+  style,
+  className,
+  children,
+  action,
+}: DivisionProps) {
+  return (
+    <div style={{ ...style }} className={className} onClick={action}>
+      {children}
+    </div>
+  );
 }

@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Footer({ style, children }: StyleProps) {
+export function Footer({ style, className, children }: StyleProps) {
   return (
     <footer
       style={{
@@ -13,6 +13,7 @@ export function Footer({ style, children }: StyleProps) {
         textAlign: "center",
         ...style,
       }}
+      className={className}
     >
       {children}
     </footer>

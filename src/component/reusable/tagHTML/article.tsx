@@ -1,5 +1,9 @@
 import { StyleProps } from "..";
 
-export function Article({ style, children }: StyleProps) {
-  return <article style={{ ...style }}>{children}</article>;
+export function Article({ style, className, children }: StyleProps) {
+  return (
+    <article style={{ ...style }} className={className}>
+      {children}
+    </article>
+  );
 }

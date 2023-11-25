@@ -1,15 +1,16 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { Anchor, Division, List, UnOrderedList } from "..";
+import { Anchor, Division, HeaderNavModal, List, UnOrderedList } from "..";
 import { Menu } from "lucide-react";
 import "./index.css";
 
-export function DashboardHeaderNav({
+export function HeaderNav({
   setPage,
 }: {
   setPage: Dispatch<SetStateAction<string>>;
 }) {
   const navList = ["Home", "About"];
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,7 +27,11 @@ export function DashboardHeaderNav({
   return (
     <>
       {isMobile ? (
-        <Division style={{ cursor: "pointer" }}>
+        <Division
+          style={{ cursor: "pointer" }}
+          action={() => setIsModalOpen(true)}
+          className="header-nav-icon"
+        >
           <Menu />
         </Division>
       ) : (
@@ -38,6 +43,26 @@ export function DashboardHeaderNav({
           ))}
         </UnOrderedList>
       )}
+      <HeaderNavModal
+        isModalOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
+        <UnOrderedList
+          style={{ cursor: "pointer", gap: "24px", flexDirection: "column" }}
+        >
+          {navList?.map((item, idx) => (
+            <List
+              key={idx}
+              action={() => {
+                setPage(item);
+                setIsModalOpen(false);
+              }}
+            >
+              <Anchor>{item}</Anchor>
+            </List>
+          ))}
+        </UnOrderedList>
+      </HeaderNavModal>
     </>
   );
 }
