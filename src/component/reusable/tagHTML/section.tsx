@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Section({ style, children }: StyleProps) {
+export function Section({ style, className, children }: StyleProps) {
   return (
     <section
       style={{
@@ -10,6 +10,7 @@ export function Section({ style, children }: StyleProps) {
         padding: 0,
         ...style,
       }}
+      className={className}
     >
       {children}
     </section>

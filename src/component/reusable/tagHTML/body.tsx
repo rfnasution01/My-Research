@@ -1,6 +1,6 @@
 import { StyleProps } from "..";
 
-export function Body({ style, children }: StyleProps) {
+export function Body({ style, className, children }: StyleProps) {
   return (
     <body
       style={{
@@ -13,6 +13,7 @@ export function Body({ style, children }: StyleProps) {
         fontFamily: "sans-serif",
         ...style,
       }}
+      className={className}
     >
       {children}
     </body>

@@ -2,3 +2,62 @@
 button:hover {
   background-color: #2980b9;
 }
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-overlay-center {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.modal-overlay-right {
+  top: 0;
+  right: 0;
+  width: 40%;
+}
+
+.modal-overlay-left {
+  top: 0;
+  left: 0;
+  width: 40%;
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-content-center {
+  box-shadow: 0 0 10px #3498db;
+}
+
+.modal-content-right .modal-content-left {
+  height: 100%;
+}
+
+/* Modal Button */
+.modal-close:hover {
+  box-shadow: 0 0 10px #3498db;
+}
+
+/* Close Button */
+.close-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}

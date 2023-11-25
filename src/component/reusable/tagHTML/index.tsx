@@ -19,3 +19,4 @@ export * from "./h6";
 export * from "./paragraph";
 export * from "./footer";
 export * from "./image";
+export * from "./hr";
